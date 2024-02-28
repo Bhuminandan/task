@@ -48,7 +48,7 @@ model Board {
   id               String @id @default(uuid())
   title            String
   order            Int
-  description      String @db.Text
+  description      String? @db.Text
 
   listId           String
   list             List @relation(fields: [listId], references: [id], onDelete: Cascade)
